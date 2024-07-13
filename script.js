@@ -1,6 +1,11 @@
 const express = require("express");//here we store the express in a variable express
 const app = express()//here i run the express in the new constant that is app that mean now all the functionalities of express are in the app
 
+
+app.set("view engine","ejs")
+
+app.use(express.static("./public"))//this means all te files get defined in the public folder
+
 //the below one is the middleware
 
 //if the user move from '/' this to '/profile' this so first the app.use will run then the app.get thing goes
@@ -19,8 +24,10 @@ app.use(function(req,res,next){
 
 app.get('/',function(req,res){//her '/' basically means that the first page of the website is generally the / which is somehow hiddn from us 
     //like in google.com or facebook.com there is the '/' but it's hidden so the '/' basically indicates the homepage of our screen
-
-    res.send('hello world');
+    
+    
+    res.render("index",{age:100});//this is used to render the ejs file that we have created 
+    // res.send('hello world');
     //this is the reponse that we get when we land on this page 
 
 })
@@ -40,11 +47,25 @@ app.get('/profile/:username',function(req,res){//now this will work for all user
     //username is the name 
 })
 
+app.get("/error",function(req,res,next){
+    throw Error("Something went wrong")
+})
+
+app.use(function errorHandler (err, req, res, next) {
+    if (res.headersSent) {
+      return next(err)
+    }
+    res.status(500)
+    res.render('error', { error: err })
+  })
+
 app.listen(3000);//this is out port number 
 
 //so port number basically means that in out computer there are multiple ports when we select above the particular port
 //then our computer will go to that port where it find this page and run it and in reponse it eill get the response that 
 //that is hello world
+
+
 
 
 console.log("hello")
