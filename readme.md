@@ -72,7 +72,8 @@ like image video frontend javascript css
 
 
 what are http method?
-
+http is basically responsible for sending and recieving the data 
+so that happen is that the data is transferred in the form of packets that data is then transmit to the server .
 
 
 what is error handling ?
@@ -98,3 +99,61 @@ if you really wanna know what heppens then watch the movie lucy
 what is ip, mac and router?
 
 mac address come in picture when you are using the local area network 
+
+What is backend?
+
+LET YOU HAVE DOWNLOAD NOW BUTTON on your web site ans when you click on it nothing would happen so all that thing would be a part of the front end 
+
+other example would be you have instagram but when you click on the like button nothing would have happen all that thing would be the part of the frontend 
+
+
+
+backend is allabout making the website more usable and puposeful for the audience
+
+other defintion means to make the website dynamic
+
+dynamic - it means that you can change the wedsite on the basis of user 
+
+
+
+why not fontend?
+with frontend websites are statuc and ther are of not use 
+
+
+what do we need to learn on backend?
+
+nodejs
+express
+mongodb
+mongoose
+and alot more
+
+
+what does it means by install?
+ copy of file from the internet is called the install. it is a form of coping the data frominter
+
+ What is nodejs?
+
+ it is a c++ code that has been taken from the v8 engine of chrome browser and it has been wrapped by the js code that allow us to write and run our js code
+
+ nodejs allow us to run the code server but what really happen is when we pass the code in js it get converted into the c++.
+
+ the V8 engine has the power to create a server but the js language don't have the power to create a server so, if we try to code for v8 engine we have to write it in c++. so this cde of c++ is covered by the wrapper of js. so this whole thing the wrapper that is in js and the core of the nodejs is c++ this combine is called the nodejs 
+
+ when we write the code in js it get to the wrapper which convert this js code into the c++ and thus our core get created 
+
+
+ how to runa file with nodejs?
+
+ node and the file name like node script.js
+
+ what is npm?
+
+ paclages are the feature that have already been created so npm is the place where we can get these things that other people have already created 
+
+ npm is the file of pasckage or playstore for the file 
+
+how to instll npm and it package?
+
+so to install it you can see it in the documnetaion of npm over the web 
+ 

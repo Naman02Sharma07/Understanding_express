@@ -1,5 +1,16 @@
 const express = require("express");//here we store the express in a variable express
 const app = express()//here i run the express in the new constant that is app that mean now all the functionalities of express are in the app
+var onelinerJoke = require("one-liner-joke")
+const figlet = require("figlet")
+ figlet("Naman Sharma",function(err,data){
+    if(err){
+        console.log("something went wrong");
+        console.dir(err);
+        return;
+    }
+    console.log(data);
+ })
+
 
 
 app.set("view engine","ejs")
@@ -59,7 +70,7 @@ app.use(function errorHandler (err, req, res, next) {
     res.render('error', { error: err })
   })
 
-app.listen(3000);//this is out port number 
+app.listen(3001);//this is out port number 
 
 //so port number basically means that in out computer there are multiple ports when we select above the particular port
 //then our computer will go to that port where it find this page and run it and in reponse it eill get the response that 
@@ -69,7 +80,7 @@ app.listen(3000);//this is out port number
 
 
 console.log("hello")
-
+console.log(onelinerJoke.getRandomJoke());
 
 
 //routing
